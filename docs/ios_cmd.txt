@@ -1,0 +1,16 @@
+1、cd libev-master 
+step1:
+./configure --prefix=`pwd`/ios/arm64 --host=arm-apple-darwin --enable-static=yes --enable-shared=no CC=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc  CFLAGS="-arch arm64 -pipe -std=c99 -Wno-extended-offsetof -Wno-trigraphs -fpascal-strings -O2 -Wreturn-type -Wunused-variable -fmessage-length=0 -fvisibility=hidden -miphoneos-version-min=6.0 -I/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/include -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk" AR=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar LDFLAGS="-arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk -miphoneos-version-min=6.0"
+
+step2:
+make clean 
+make
+
+step3:
+make install
+
+note:
+	ios 其它架构编译 例如armv7s 只需要在上述命令中 查找替换 arm64 为 armv7s即可
+	
+
+
